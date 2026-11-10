@@ -1,0 +1,26 @@
+[00:00:00] regression start seed=4711 tests=4
+[00:00:01] TEST test_reset START
+[00:00:01] @1000ns INFO  reset released
+[00:00:02] TEST test_reset PASS
+[00:00:02] TEST test_basic_wr_rd START
+[00:00:02] @1500ns INFO  write addr=0x10 data=0xAA
+[00:00:02] @1620ns INFO  read  addr=0x10 data=0xAA
+[00:00:03] TEST test_basic_wr_rd PASS
+[00:00:03] TEST test_fifo_stress START
+[00:00:03] @2000ns INFO  starting 1000 random transactions
+[00:00:09] @180000ns INFO  fifo count=14 wr_en=1 rd_en=0
+[00:00:09] @180010ns INFO  fifo count=15 wr_en=1 rd_en=0
+[00:00:09] @180020ns INFO  fifo count=16 wr_en=1 rd_en=0
+[00:00:09] @180020ns WARN  fifo full asserted, driver still pushing (txn 412)
+[00:00:09] @180030ns WARN  fifo full asserted, driver still pushing (txn 412)
+[00:00:09] @180040ns WARN  fifo full asserted, driver still pushing (txn 412)
+[00:00:09] @180050ns INFO  read side idle: consumer waiting for credit
+[00:00:09] @180060ns WARN  fifo full asserted, driver still pushing (txn 412)
+[00:00:09] @180070ns INFO  read side idle: consumer waiting for credit
+[00:00:10] @180080ns WARN  fifo full asserted, driver still pushing (txn 412)
+[00:00:10] @180090ns INFO  read side idle: consumer waiting for credit
+[00:00:10] ... no further output for 3600s
+[01:00:10] ERROR watchdog timeout, killing simulator (pid 20481)
+[01:00:10] TEST test_fifo_stress KILLED
+[01:00:10] TEST test_random_mix NOT RUN
+[01:00:10] regression end: 2 pass, 0 fail, 1 killed, 1 not run
