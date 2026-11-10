@@ -17,6 +17,17 @@ You may use any tools you normally use (including AI) unless a section says othe
 
 Do **not** edit files outside your own `solutions/<name>/` folder.
 
+## Environment (GitHub Codespaces)
+
+Open the repo in a Codespace; `.devcontainer` installs the tools. Commercial simulators (e.g. Cadence `xrun`) are **not** available there, so use the open-source ones:
+
+```bash
+iverilog -g2012 -o sim.vvp tb.sv dut.sv && vvp sim.vvp      # Icarus Verilog
+verilator --binary --timing -Wall tb.sv dut.sv && ./obj_dir/V*   # Verilator
+```
+
+Keep your code simulator-neutral where possible (avoid vendor-only features) and document the exact command you used in `RUN.md`.
+
 ## Sections
 
 | # | Folder | Focus |

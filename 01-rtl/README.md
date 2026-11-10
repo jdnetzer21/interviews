@@ -26,4 +26,4 @@ Write a self-checking testbench `tb_sync_fifo.sv` (scoreboard/reference model, n
 ## Task 4: Bug hunt
 Review [`buggy_arbiter.sv`](buggy_arbiter.sv). List every bug you find in `bugs.md` and provide a fixed `fixed_arbiter.sv`.
 
-Any open-source simulator is fine (Verilator, Icarus, etc.). Include run instructions in `RUN.md`.
+`xrun` is not available in Codespaces. Use Icarus Verilog (`iverilog -g2012`) or Verilator, both preinstalled; avoid UVM and other commercial-only features. Include run instructions in `RUN.md`.

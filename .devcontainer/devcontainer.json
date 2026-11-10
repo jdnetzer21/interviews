@@ -1,0 +1,14 @@
+{
+  "name": "interview-env",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y iverilog verilator gtkwave gawk jq tree && echo 'Tools ready: iverilog, verilator'",
+  "customizations": {
+    "vscode": {
+      "extensions": ["mshr-h.veriloghdl", "ms-python.python"]
+    }
+  }
+}
